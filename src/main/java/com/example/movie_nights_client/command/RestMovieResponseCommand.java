@@ -13,7 +13,9 @@ import java.util.ArrayList;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class MovieResponseCommand {
+public class RestMovieResponseCommand {
+
+    private String title;
 
     private String imdbID;
 

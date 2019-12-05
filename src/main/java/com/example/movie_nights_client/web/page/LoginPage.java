@@ -1,5 +1,6 @@
-package com.example.movie_nights_client;
+package com.example.movie_nights_client.web.page;
 
+import com.example.movie_nights_client.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.H1;

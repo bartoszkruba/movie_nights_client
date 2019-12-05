@@ -1,11 +1,11 @@
 package com.example.movie_nights_client;
 
+import com.example.movie_nights_client.web.page.IndexPage;
+import com.example.movie_nights_client.web.page.LoginPage;
+import com.example.movie_nights_client.web.page.MovieSearchPage;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.page.Page;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.RouterLayout;
 import com.vaadin.flow.router.RouterLink;
@@ -20,14 +20,16 @@ public class MainLayout extends VerticalLayout implements RouterLayout {
 
         var logo = new RouterLink("Movie Nights", IndexPage.class);
         var login = new RouterLink("Login", LoginPage.class);
+        var search = new RouterLink("Search For Movies", MovieSearchPage.class);
         logo.setClassName("navigation-logo");
         login.setClassName("navigation-link");
+        search.setClassName("navigation-link");
 
         var logoHolder = new HorizontalLayout(logo);
 
         navigation.add(logoHolder);
         navigation.add(login);
-//        navigation.add(new H5("Register"));
+        navigation.add(search);
 
         navigation.expand(logoHolder);
 
