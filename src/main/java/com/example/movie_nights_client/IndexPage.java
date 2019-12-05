@@ -16,10 +16,8 @@ import reactor.core.publisher.UnicastProcessor;
 import org.springframework.web.reactive.function.client.WebClient;
 
 
-@Route("")
+@Route(value = "", layout = MainLayout.class)
 @PWA(name = "Project Base for Vaadin Flow with Spring", shortName = "Vaadin n shit")
-@CssImport("./my-styles/style.css")
-@Push
 public class IndexPage extends VerticalLayout {
 
     private String username;
