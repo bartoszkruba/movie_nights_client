@@ -13,14 +13,4 @@ public class MovieNightsClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(MovieNightsClientApplication.class, args);
     }
-
-    @Bean
-    public UnicastProcessor<ChatMessage> publisher() {
-        return UnicastProcessor.create();
-    }
-
-    @Bean
-    Flux<ChatMessage> messages(@Autowired UnicastProcessor<ChatMessage> publisher) {
-        return publisher.replay(30).autoConnect();
-    }
 }
