@@ -43,9 +43,8 @@ public class MovieSearchBar extends VerticalLayout {
         var searchInput = new VerticalLayout();
         var searchButton = new Button("Search");
 
-        searchButton.addClickListener(click -> {
-            movieSearchPage.searchForMovies(titleField.getValue(), typeSelect.getValue(), yearField.getValue());
-        });
+        searchButton.addClickListener(click -> movieSearchPage
+                .searchForMovies(titleField.getValue(), typeSelect.getValue(), yearField.getValue()));
 
         searchButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         searchInput.add(searchButton);

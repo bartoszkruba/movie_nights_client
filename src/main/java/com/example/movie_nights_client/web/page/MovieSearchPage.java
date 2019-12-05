@@ -44,6 +44,9 @@ public class MovieSearchPage extends VerticalLayout {
                 .uri(uri.toUriString())
                 .retrieve()
                 .bodyToFlux(RestMovieResponseCommand.class)
-                .subscribe(movie -> getUI().ifPresent(ui -> ui.access(() -> movies.add(new Movie(movie)))));
+                .subscribe(movie -> getUI().ifPresent(ui -> ui.access(() -> {
+                    movies.removeAll();
+                    movies.add(new Movie(movie));
+                })));
     }
 }
